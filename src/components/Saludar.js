@@ -1,13 +1,13 @@
 import React from "react";
 
 export default function Saludar(props) {
-  console.log(props.userinfo);
+  console.log(props);
+
   return (
     <div>
-      <p>
-        hola {props.userinfo.nombre}, tiene {props.userinfo.edad} años, su color
-        favorito es {props.userinfo.color}.
-      </p>
+      <button onClick={() => props.saludarfn(props.userinfo.nombre)}>
+        Saludar
+      </button>
     </div>
   );
 }
