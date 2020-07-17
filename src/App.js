@@ -5,7 +5,6 @@ import Saludar from "./components/Saludar";
 
 function App() {
   const user = {
-    nombre: "leonardo castrillon",
     edad: "99",
     color: "azul"
   };
