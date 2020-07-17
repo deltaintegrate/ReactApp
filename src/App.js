@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Saludar from "./components/Saludar";
 
 function App() {
   const [stateCar, setStateCar] = useState(false);
+  const [contar, setContar] = useState(0);
+
+  useEffect(() => {
+    console.log("Total:" + contar);
+  }, [contar]);
+
   const user = {
     nombre: "leo",
     edad: "99",
@@ -20,6 +26,7 @@ function App() {
   const encenderApagar = () => {
     //setStateCar(!stateCar);
     setStateCar(prevValue => !prevValue);
+    setContar(contar + 1);
   };
   return (
     <div className="App">
@@ -27,6 +34,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <Saludar userinfo={user} saludarfn={saludarfn} />
         <h3>EL coche esta: {stateCar ? "Encendido" : "apagado"}</h3>
+        <h4>Click: {contar}</h4>
         <button onClick={encenderApagar}> Encender/Apagar</button>
       </header>
     </div>
