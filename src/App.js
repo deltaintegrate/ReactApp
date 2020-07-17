@@ -5,12 +5,15 @@ import Saludar from "./components/Saludar";
 
 function App() {
   const user = {
+    nombre: "leo",
     edad: "99",
     color: "azul"
   };
 
-  const saludarfn = name => {
-    console.log("hola" + name);
+  const saludarfn = (name, edad) => {
+    console.log("hola " + name + " tiene " + edad + " años.");
+
+    console.log(`hola ${name}, tiene ${edad} años.`);
   };
   return (
     <div className="App">
