@@ -1,15 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import HolaMundo from "./components/HolaMundo";
+import AdiosMundo from "./components/AdiosMundo";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <HolaMundo />
+        <AdiosMundo />
+        <p>leonardo Castrillon</p>
+
         <a
           className="App-link"
           href="https://reactjs.org"
