@@ -1,26 +1,15 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import HolaMundo from "./components/HolaMundo";
-import AdiosMundo from "./components/AdiosMundo";
+import Saludar from "./components/Saludar";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <HolaMundo />
-        <AdiosMundo />
-        <p>leonardo Castrillon</p>
-
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Saludar name="Leonardo CAstrillon wololo" anos="26" />
+        <Saludar name="paco del mazo" anos="36" />
       </header>
     </div>
   );
